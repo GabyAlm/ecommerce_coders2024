@@ -1,1 +1,2 @@
-chave	nome	preco	estoque	descricao	status
+nome	quantidade	 preco unit	  preco final
+bola	3	5.0	15.0
