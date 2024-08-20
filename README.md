@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O objetivo deste projeto é desenvolver um sistema robusto e eficiente de gerenciamento de inventário para uma loja virtual. O sistema permite o cadastro, atualização, exclusão e listagem de produtos, além de realizar vendas e gerar relatórios detalhados em formato TXT. Foi projetado para lidar com erros de forma elegante e para oferecer uma interface amigável para os usuários.
+O objetivo deste projeto é desenvolver um sistema robusto e eficiente de gerenciamento de inventário para uma loja virtual. O sistema permite o cadastro, atualização, exclusão e listagem de produtos, além de realizar vendas e gerar relatórios detalhados em formato TXT. Foi projetado para lidar com erros na inserção de dados e oferecer uma interface amigável para os usuários.
 
 ## Funcionalidades
 
@@ -11,37 +11,36 @@ O objetivo deste projeto é desenvolver um sistema robusto e eficiente de gerenc
 **Armazenamento**: Produtos são armazenados utilizando dicionários indexados por um identificador único.
 
 ### 2. Atualização de Produtos
-**Atualizações Possíveis**: Preço, quantidade em estoque e descrição.
-**Validação**: Mecanismos de validação para evitar erros comuns, como preços negativos ou estoque insuficiente.
+**Atualizações Possíveis**: Nome, chave, preço, quantidade em estoque e descrição.
+**Validação**: Mecanismos de validação para evitar erros comuns.
 
 ### 3. Exclusão de Produtos
-**Remoção Segura**: Exclusão de produtos do inventário com tratamento de exceções para produtos inexistentes.
+**Remoção Segura**: Exclusão de produtos do inventário via chave de identificação única com tratamento de exceções para produtos inexistentes.
 
 ### 4. Realização de Vendas
-**Compra de Múltiplos Produtos**: Clientes podem comprar múltiplos produtos em quantidades variáveis.
 **Atualização de Estoque**: Estoque atualizado automaticamente após cada venda.
 **Tratamento de Exceções**: Verificação de estoque insuficiente com mensagens de erro claras.
 
 ### 5. Relatórios de Vendas
-**Formato CSV**: Geração de relatórios em formato TXT contendo informações detalhadas da venda.
-**Informações Incluídas**: Nome do produto, quantidade vendida, preço unitário, valor total da venda e data/hora da transação.
+**Formato TXT**: Geração de relatórios em formato TXT contendo informações detalhadas da venda.
+**Informações Solicitadas**: Chave do produto, quantidade vendida.
 
 ### 6. Persistência de Dados
 **Arquivos de Dados**: Dados do inventário e informações de vendas são persistidos em arquivos de texto, garantindo a persistência entre execuções.
 
 ### 7. Tratamento de Exceções
-**Exceções Personalizadas**: Tratamento robusto de exceções para cadastro, atualização, exclusão e manipulação de dados.
+**Exceções Personalizadas**: Tratamento robusto de exceções para cadastro, atualização e exclusão.
 **Erros de Estoque**: Exceções personalizadas para erros de estoque insuficiente e manipulação inadequada de dados.
 
 ### 8. Interface com o Usuário
 **Interação Amigável**: Menus e opções claras que guiam o usuário durante o uso do sistema.
-**Flexibilidade**: Uso de funções com parâmetros variáveis (*args, **kwargs) para maior flexibilidade.
+**Flexibilidade**: Uso de funções com parâmetros variáveis para maior flexibilidade.
 
 ### 9. Técnicas Funcionais
-**Programação Funcional**: Uso de `map`, `filter`, `reduce` e funções lambda para manipulação e processamento eficiente de listas de produtos e vendas.
+**Programação Funcional**: Uso de funções lambda para manipulação e processamento eficiente de listas de produtos e vendas.
 
-### 10. Documentação (em andamento)
-**Documentação Completa**: Descrição detalhada da arquitetura, decisões de design e exemplos de uso para facilitar o entendimento dos usuários.
+### 10. Documentação
+**Documentação Completa**: Descrição da arquitetura e exemplos de uso para facilitar o entendimento dos usuários.
 
 ## Estrutura do Projeto
 
@@ -53,3 +52,13 @@ O objetivo deste projeto é desenvolver um sistema robusto e eficiente de gerenc
 ├── venv/
 ├── README.md
 └── requirements.txt
+
+## Uso
+
+**Configuração do Ambiente**
+
+git clone https://github.com/ju4nv1e1r4/ecommerce_coders2024.git
+cd diretorio/do/projeto
+python3 -m venv venv
+source venv/bin/activate 
+pip install -r requirements.txt
